@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pruebas sobre Gifgrid.js debe mostrarse correctamente 1`] = `
+<div
+  className="card my-3 shadow-sm fade-in-down"
+>
+  <div
+    className="card-header"
+  >
+    <div
+      className="d-flex flex-row justify-content-between card-header-content"
+    >
+      <div
+        className="d-flex flex-row flex-nowrap"
+      >
+        <h3>
+          pokemon
+        </h3>
+      </div>
+      <h5>
+         
+        Esperando 
+         resultados 
+      </h5>
+    </div>
+  </div>
+  <div
+    className="card-body"
+  >
+    <div
+      className="row"
+    >
+      <GifGridItemLoading
+        placeholders={10}
+      />
+    </div>
+  </div>
+</div>
+`;

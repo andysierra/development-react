@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests over GifGridItem should render the component correctly 1`] = `
+<div
+  className="card p-0 col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3"
+>
+  <div
+    className="card-body p-0 d-flex flex-col justify-content-center overflow-hidden"
+  >
+    <img
+      alt="some idsome title"
+      height="200px"
+      onLoad={[Function]}
+      src="https://media2.giphy.com/media/zj6NmJC6trBhm/giphy.gif?cid=c0222e32lx6l5f4wy8buqpwvenpm9bi8du5loy8s3klv7byz&rid=giphy.gif&ct=g"
+    />
+  </div>
+  <div
+    className="card-footer"
+  >
+    <p>
+      some title
+    </p>
+  </div>
+</div>
+`;
