@@ -14,9 +14,11 @@ const GifExpertApp = () => {
 
       <div className="d-flex flex-column-reverse justify-content-start">
         {
-          categories.map((cat, idx) => {
-            return <GifGrid key={cat+'_'+idx} cat={cat}/>
-          })
+          categories.map((cat, idx) => (
+            <GifGrid 
+              key={cat+'_'+idx} 
+              cat={cat}/>
+          ))
         }
       </div>
     </div>
