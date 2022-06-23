@@ -5,10 +5,10 @@ const AddCategory = ({setCategories}) => {
 
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = ({target}) => setInputValue(target.value);
+  const onChange = ({target}) => setInputValue(target.value);
+
   const handleSubmit = e => {
     e.preventDefault();
-
     if(inputValue.trim().length > 2) {
       setCategories(cats => cats.includes(inputValue)? cats : [...cats, inputValue]);
       setInputValue('');
@@ -25,7 +25,7 @@ const AddCategory = ({setCategories}) => {
         required    = {true}
         title       = "Debe tener mínimo 3 letras"
         placeholder = 'Buscar un GIF'
-        onChange  ={handleInputChange}/>
+        onChange    = {onChange}/>
     </form>
   );
 
