@@ -1,0 +1,8 @@
+body {
+  padding: 30px;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
