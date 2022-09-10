@@ -1,6 +1,10 @@
-import { TodoList } from "./TodoList"
+import { useTodo } from "../hooks/useTodo"
+import { TodoList }     from "./TodoList"
 
 export const TodoApp = () => {
+
+  const {todos, doneById, deleteById} = useTodo();
+
   return (
     <div className="container-fluid">
       <div className="d-flex flex-row justify-content-center">
@@ -15,7 +19,7 @@ export const TodoApp = () => {
       <hr />
       <div className="row">
         <div className="col-12 col-sm-12 col-md-7">
-          <TodoList/>
+          <TodoList list={ todos } onDone={ doneById } onDelete={ deleteById }/>
         </div>
         <div className="col-12 col-sm-12 col-md-5">
           <h5>Agregue un TODO</h5>
