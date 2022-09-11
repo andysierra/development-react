@@ -13,11 +13,6 @@ export const Checkbox = ({
 
   const [isChecked, setIsChecked] = useState(checked);
 
-  useEffect(() => {
-    onChange(id, isChecked)
-  }, [isChecked]);
-  
-
   return (
     <div className="d-flex flex-row justify-content-center mx-3">
         
@@ -39,6 +34,7 @@ export const Checkbox = ({
             checked   = { isChecked }
             onChange  = { ()=>{ 
               setIsChecked(isChecked => !isChecked);
+              onChange(id);
             } }/>
         </div>
 

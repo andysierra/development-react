@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-export const useForm = ( defaultForm = {} ) => {
+export const useForm = ( defaultForm = {}, customValidation = undefined ) => {
   
   const [form, setForm] = useState(defaultForm);
 
   const onInputChange = ({target}) => {
     const {name, value} = target;
+    if(!name) throw new Error('Field don`t have a name attribute!');
 
     // ... validation stuff
 
@@ -17,10 +18,13 @@ export const useForm = ( defaultForm = {} ) => {
 
   const onReset = () => { setForm(defaultForm) }
 
+  const validate = () => customValidation? customValidation() : false;
+
   return {
     ...form,
     form,
     onInputChange,
-    onReset
+    onReset,
+    validate
   }
 }

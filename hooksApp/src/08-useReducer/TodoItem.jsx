@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Checkbox } from "../components/Checkbox";
 
 const defaultTodoItem = {
@@ -15,12 +14,6 @@ export const TodoItem = ({
   onDone    = onDoneDef, 
   onDelete  = onDeleteDef
 }) => {
-
-  useEffect(() => {
-    console.log('rerendering')
-  }, [info.done])
-  
-
   return (
     <div className="d-flex flex-row justify-content-end align-items-baseline">
 
@@ -31,12 +24,12 @@ export const TodoItem = ({
       </div>
 
       <Checkbox 
-        label="Done?"
-        labelClassName="form-check-label user-select-none cursor-pointer"
-        inputClassName="form-check-input pull-left" 
-        id={info.id}
-        checked={false} 
-        onChange={(id, done)=>{ onDone(id,done) }}/>
+        label           = "Done?"
+        labelClassName  = "form-check-label user-select-none cursor-pointer"
+        inputClassName  = "form-check-input pull-left" 
+        id              = { info.id }
+        checked         = { info.done } 
+        onChange        = { onDone } />
 
       <div className="flex-shrink-1">
         <i 

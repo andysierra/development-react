@@ -1,18 +1,20 @@
-export const todoReducer = (initialState = [], action = {}) => {
+export const todoReducer = (state = [], action = {}) => {
   
   switch (action.type) {
 
+    case "[payload = todo] add a new TO-DO":
+      if(typeof(action.payload) === 'object') {
+        return [...state, action.payload];
+      }
+      else throw new Error('You`re trying to add an invalid TODO, check todo type!');
+    
     case "marks as done a todo by id":
-      console.log("marks as done a todo by id",action.payload);
-      initialState.map(todo => action.payload===todo.id? {...todo, done:!todo.done} : todo);
-      return initialState;
-
+      return state.map(todo => action.payload===todo.id? {...todo, done:!todo.done} : todo);
+      
     case "delete a todo by id":
-      console.log("delete a todo by id",action.payload);
-      initialState = initialState.filter(todo => todo.id != action.payload);
-      return initialState;
-  
-    default: return initialState;
+      return state.filter(todo => todo.id != action.payload);
+
+    default: return state;
   }
 
 };

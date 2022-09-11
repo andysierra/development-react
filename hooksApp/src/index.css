@@ -6,3 +6,8 @@ body {
   cursor: pointer;
   text-decoration: underline;
 }
+
+.cursor-none:hover {
+  user-select: none;
+  -webkit-user-drag: none;
+}
