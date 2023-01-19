@@ -1,5 +1,6 @@
 import { UseStateTriggersARender } from "./components/UseStateTriggersARender/UseStateTriggersARender";
 import { Padre } from './components/07-tarea-memo/Padre'; 
+import { TODOApp } from "./components/TODOApp/TODOApp";
 
 const App = () => {
   return (
@@ -22,12 +23,18 @@ const App = () => {
         </div>
         <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
           <div className="bg-secondary p-1 h-100">
+            <p>We apply React.memo and useCallback</p>
             <Padre/>
           </div>
         </div>
         <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
           <div className="bg-warning p-1 h-100">
-            <p>pez</p>
+            <b>Todo App</b><br/>
+            <small>We apply computed property object form, text wrap and 
+              useReducer.
+              Hint: Use input controlled forms with useForm!
+            </small>
+            <TODOApp/>
           </div>
         </div>
         <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
